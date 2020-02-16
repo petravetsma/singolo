@@ -35,12 +35,6 @@
   margin: 0;
 }
 
-/*
-body {
-
-}
-*/
-
 .header-wrap,
 .phones-block-wrap,
 .main-wrap {
@@ -58,7 +52,9 @@ header {
 
 header .logo {
   display: inline-block;
-  padding-top: 35px;
+  padding-top: 28.5px;
+  letter-spacing: -0.46px;
+  font-size: 25px;
   font-family: "Lato-Bold";
 }
 
@@ -72,9 +68,10 @@ header .logo-asterisk {
 }
 
 header nav {
-  padding-top: 46px;
+  padding-top: 38px;
   float: right;
   color: #ffffff;
+  letter-spacing: -0.4px;
   font-family: "Lato-Bold";
 }
 
@@ -82,14 +79,31 @@ header nav ul li {
   position: relative;
   list-style-type: none;
   display: inline-block;
-  padding-right: 14px;
+  padding-left: 29px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+header nav ul li:hover {
+
+  color: #81cfd9;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+header nav ul li.active {
+  color: #f06c64;
 }
 
 header nav ul li::after {
   position: absolute;
-  right: 3px;
+  right: -17.5px;
   content: "\00B7";
   color: #464a5d;
+}
+
+header nav ul li:last-child::after {
+  content: none;
 }
 
 
@@ -111,28 +125,42 @@ header nav ul li::after {
   position: absolute;
   top: 53px;
   left: 72px;
-  box-shadow: 25px 25px #ce5d56;
-  border-radius: 30px;
+  z-index: 10;
+}
+
+.shadow1 {
+  position: absolute;
+  top: 53px;
+  left: 72px;
+  z-index: 5;
 }
 
 .yellow-pic {
   position: absolute;
   top: 118px;
   left: 86px;
+  z-index: 15;
 }
 
 .phone2 {
   position: absolute;
   top: 174px;
   right: 97px;
-  box-shadow: 25px 25px #ce5d56;
-  border-radius: 30px;
+  z-index: 10;
+}
+
+.shadow2 {
+  position: absolute;
+  top: 174px;
+  left: 386px;
+  z-index: 5;
 }
 
 .blue-pic {
   position: absolute;
   top: 188px;
   right: 162px;
+  z-index: 15;
 }
 
 .arrow-l {
@@ -141,10 +169,20 @@ header nav ul li::after {
   left: 2px;
 }
 
+.arrow-l:hover {
+  cursor: pointer;
+  background-color: yellow;
+}
+
 .arrow-r {
   position: absolute;
   top: 281px;
   right: 0;
+}
+
+.arrow-r:hover {
+  cursor: pointer;
+  background-color: yellow;
 }
 
 
@@ -157,13 +195,21 @@ main {
 }
 
 main h1 {
-  padding-top: 67px;
-  padding-bottom: 33px;
+  padding-top: 59px;
+  padding-bottom: 18px;
+  letter-spacing: -0.007em;
+  color: #666d89;
+  font-size: 30px;
   font-family: "Lato-Black";
 }
 
 main h1 + p {
-  margin-bottom: 55px;
+  margin-bottom: 41px;
+  letter-spacing: -0.005em;
+  line-height: 1.75em;
+  word-spacing: 0.10em;
+  color: #767e9e;
+  font-size: 18px;
   font-family: "Lato-Light";
 }
 
@@ -179,26 +225,69 @@ main .columns section {
 }
 
 main .columns section h3 {
+  color: #666d89;
+  font-size: 18px;
+  margin-bottom: 12px;
   font-family: "Lato-Black";
 }
 
 main .columns section p {
-  font-family: "Lato-Regulazr";
+  color: #767e9e;
+
+  line-height: 21.56px;
+  font-size: 12px;
+  font-family: "Lato-Regular";
 }
 
 main .columns section .img-wrap {
-  display: flex;
-  width: 60px;
-  height: 60px;
+  position: relative;
+  width: 59px;
+  height: 59px;
+  margin-top: 4px;
   border-radius: 50%;
   border: 2px solid #666d89;
 }
 
+.pen-wrap,
+.phone-wrap {
+  margin-left: 1px;
+}
+
 main .columns section .img-wrap + div {
   width: 240px;
-  padding: 0 0 20px 20px;
+  padding: 0 0 26px 20px;
 }
 
 main .columns section img {
-  margin: auto;
+  position: absolute;
+}
+
+.pen {
+  top: 12px;
+  left: 12px;
+}
+
+.bulb {
+  top: 11px;
+  left: 17px;
+}
+
+.heart {
+  top: 14px;
+  left: 12px;
+}
+
+.phone {
+  top: 12px;
+  left: 17px;
+}
+
+.bubble {
+  top: 14px;
+  left: 12px;
+}
+
+.star {
+  top: 12px;
+  left: 12px;
 }
