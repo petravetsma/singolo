@@ -53,7 +53,7 @@ header {
 header .logo {
   display: inline-block;
   padding-top: 28.5px;
-  letter-spacing: -0.46px;
+  letter-spacing: -0.5px;
   font-size: 25px;
   font-family: "Lato-Bold";
 }
@@ -205,12 +205,13 @@ main h1 {
 
 main h1 + p {
   margin-bottom: 41px;
-  letter-spacing: -0.005em;
-  line-height: 1.75em;
-  word-spacing: 0.10em;
+  /* letter-spacing: -0.005em; */
+  line-height: 30px;
+  /* word-spacing: 0.10em; */
   color: #767e9e;
   font-size: 18px;
   font-family: "Lato-Light";
+  text-align: justify;
 }
 
 main .columns {
@@ -222,28 +223,43 @@ main .columns {
 main .columns section {
   display: flex;
   width: 300px;
+  height: 123px;
+  overflow: hidden;
 }
 
 main .columns section h3 {
   color: #666d89;
   font-size: 18px;
-  margin-bottom: 12px;
+  letter-spacing: -0.09px;
+  padding-top: 2px;
+  margin-bottom: 8px;
   font-family: "Lato-Black";
 }
 
-main .columns section p {
-  color: #767e9e;
+main .columns section:nth-child(3) h3,
+main .columns section:nth-child(6) h3 {
+  padding-left: 3px;
+}
 
+main .columns section p {
+  margin-left: 1px;
+  text-align:  justify;
+  color: #767e9e;
   line-height: 21.56px;
   font-size: 12px;
   font-family: "Lato-Regular";
+}
+
+main .columns section p span {
+  display: inline-block;
+  margin-top: 1px;
 }
 
 main .columns section .img-wrap {
   position: relative;
   width: 59px;
   height: 59px;
-  margin-top: 4px;
+  margin-top: 6px;
   border-radius: 50%;
   border: 2px solid #666d89;
 }
