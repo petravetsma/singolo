@@ -84,7 +84,7 @@ header nav ul li {
   font-size: 12px;
 }
 
-header nav ul li:hover {
+header nav ul li span:hover {
 
   color: #81cfd9;
   text-decoration: underline;
