@@ -211,9 +211,7 @@ main h1 {
 
 main h1 + p {
   margin-bottom: 41px;
-  /* letter-spacing: -0.005em; */
   line-height: 30px;
-  /* word-spacing: 0.10em; */
   color: #767e9e;
   font-size: 18px;
   font-family: "Lato-Light";
