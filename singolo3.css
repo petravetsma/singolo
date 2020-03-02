@@ -1,0 +1,79 @@
+/* --- Fonts import --- */
+
+@font-face {
+  font-family: "Lato-Black";
+  src: url("assets/fonts/Lato-Black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lato-Light";
+  src: url("assets/fonts/Lato-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lato-Regular";
+  src: url("assets/fonts/Lato-Regular.ttf") format("truetype");
+}
+
+/* --- /Fonts import --- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+.form-block {
+  height: 654px;
+  background-color: #f06c64;
+}
+
+.form-block .container > h2 {
+  padding-top: 65px;
+  font-size: 30px;
+  font-family: "Lato-Black", "Tahoma", sans-serif;
+  color: #f0d8d9;
+}
+
+.form-block .container > p {
+  margin-top: 30px;
+  font-size: 18px;
+  line-height: 30px;
+  font-family: "Lato-Light", "Tahoma", sans-serif;
+  color: #f0d8d9;
+  text-align: justify;
+}
+
+.block-wrap {
+  display: flex;
+  margin-top: 45px;
+}
+
+.forms-wrap {
+  flex: 0 0 60%;
+  margin-right: 20px;
+}
+
+.forms-wrap input {
+  width: 619px;
+  height: 38px;
+  margin-bottom: 16px;
+}
+
+.forms-wrap  textarea {
+  width: 619px;
+  height: 202px;
+  resize: none;
+}
+
+
+.information {
+  flex: 0 0 40%;
+}
