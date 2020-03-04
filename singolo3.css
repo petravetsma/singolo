@@ -37,14 +37,15 @@
 }
 
 .form-block .container > h2 {
-  padding-top: 65px;
+  padding-top: 59px;
   font-size: 30px;
   font-family: "Lato-Black", "Tahoma", sans-serif;
   color: #f0d8d9;
+  letter-spacing: -0.007em;
 }
 
 .form-block .container > p {
-  margin-top: 30px;
+  margin-top: 18px;
   font-size: 18px;
   line-height: 30px;
   font-family: "Lato-Light", "Tahoma", sans-serif;
@@ -54,12 +55,13 @@
 
 .block-wrap {
   display: flex;
-  margin-top: 45px;
+  margin-top: 42px;
 }
 
 .forms-wrap {
   flex: 0 0 60%;
-  margin-right: 20px;
+  margin-top: 2px;
+  margin-right: 21px;
 }
 
 .forms-wrap input {
@@ -67,6 +69,7 @@
   height: 38px;
   padding-left: 15px;
   margin-bottom: 16px;
+  font-size: 12px;
   background-color: #d6564f;
   border: none;
   border-radius: 4px;
@@ -75,7 +78,8 @@
 .forms-wrap  textarea {
   width: 619px;
   height: 202px;
-  padding: 14px 0 0 15px;
+  padding: 10px 0 0 15px;
+  font-size: 12px;
   background-color: #d6564f;
   border: none;
   border-radius: 4px;
@@ -90,24 +94,28 @@
 
 
 .information {
-  flex: 0 0 40%;
+  flex: 0 0 32.073%;
 }
 .information h3 {
   font-family: "Lato-Black", "Tahoma", sans-serif;
   font-size: 18px;
-  color: #f0d8d9
+  color: #f0d8d9;
+  letter-spacing: -0.007em;
 }
 
 .information > p {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 8px;
+  margin-bottom: 19px;
   font-family: "Lato-Regular", "Tahoma", sans-serif;
   font-size: 12px;
-  line-height: 21.56px;
+  line-height: 22px;
   color: #f0d8d9;
+  text-align: justify;
 }
 
 .information span {
+  position: relative;
+  display: inline-block;
   font-family: "Lato-Regular", "Tahoma", sans-serif;
   font-size: 12px;
   line-height: 21.56px;
@@ -116,23 +124,44 @@
 
 .information .nav-icon {
   display: inline-block;
+  top: 2px;
+  left: 3px;
   width: 7px;
   height: 11px;
   background: url("assets/images/loc.png");
 }
 
+.information .nav-icon + span {
+  top: 1px;
+  left: 12px;
+}
+
 .information .tel-icon {
   display: inline-block;
+  top: 2px;
+  left: 1px;
   width: 11px;
   height: 11px;
   background: url("assets/images/tel.png");
 }
 
+.information .tel-icon + span {
+  top: 1px;
+  left: 8px;
+}
+
 .information .mes-icon {
   display: inline-block;
+  top: 3px;
+  left: 0px;
   width: 13px;
-  height: 11px;
+  height: 8px;
   background: url("assets/images/mes.png");
+}
+
+.information .mes-icon + span {
+  top: 2px;
+  left: 6px;
 }
 
 footer {
@@ -149,19 +178,21 @@ footer .container {
 
 footer .copyright {
   display: inline-block;
+  margin-left: 2px;
   width: 92px;
   height: 11px;
   background: url("assets/images/copyright.png");
 }
 
 footer .social-buttons {
+  margin-top: 3px;
 }
 
 footer .social-buttons span {
   display: inline-block;
   width: 32px;
   height: 32px;
-  margin-right: 4px;
+  margin-left: 4px;
 }
 
 footer .social-buttons span:first-child {
