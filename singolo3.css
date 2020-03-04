@@ -155,7 +155,6 @@ footer .copyright {
 }
 
 footer .social-buttons {
-  margin-top: 24px;
 }
 
 footer .social-buttons span {
@@ -166,19 +165,19 @@ footer .social-buttons span {
 }
 
 footer .social-buttons span:first-child {
-  background-image: url("assets/images/social_f.png");
+  background-image: url("assets/images/social_f2.png");
 }
 
 footer .social-buttons span:nth-child(2) {
-  background-image: url("assets/images/social_g.png");
+  background-image: url("assets/images/social_g2.png");
 }
 
 footer .social-buttons span:nth-child(3) {
-  background-image: url("assets/images/social_t.png");
+  background-image: url("assets/images/social_t2.png");
 }
 
 footer .social-buttons span:last-child {
-  background-image: url("assets/images/social_in.png");
+  background-image: url("assets/images/social_in2.png");
 }
 
 footer .social-buttons span:first-child:hover {
