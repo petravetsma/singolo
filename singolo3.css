@@ -152,7 +152,7 @@
 
 .information .nav-icon + span {
   top: 1px;
-  left: 12px;
+  left: 11px;
 }
 
 .information .tel-icon {
@@ -166,7 +166,7 @@
 
 .information .tel-icon + span {
   top: 1px;
-  left: 8px;
+  left: 7px;
 }
 
 .information .mes-icon {
@@ -180,7 +180,7 @@
 
 .information .mes-icon + span {
   top: 2px;
-  left: 6px;
+  left: 5px;
 }
 
 footer {
@@ -201,6 +201,14 @@ footer .copyright {
   width: 92px;
   height: 11px;
   background: url("assets/images/copyright.png");
+}
+
+footer .copyright > span {
+  position: relative;
+  top: -5px;
+  left: 0px;
+  font-size: 12px;
+  color: #575d74;
 }
 
 footer .social-buttons {
