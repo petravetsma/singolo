@@ -210,12 +210,14 @@ main h1 {
 }
 
 main h1 + p {
+  height: 60px;
   margin-bottom: 41px;
   line-height: 30px;
   color: #767e9e;
   font-size: 18px;
   font-family: "Lato-Light";
   text-align: justify;
+  overflow: hidden;
 }
 
 main .columns {
