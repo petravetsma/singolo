@@ -543,22 +543,6 @@ main .columns section img {
   background-image: url("assets/images/social_in.png");
 }
 
-.about-us .social-buttons span:first-child:hover {
-  background-image: url("assets/images/social_fw.png");
-}
-
-.about-us .social-buttons span:nth-child(2):hover {
-  background-image: url("assets/images/social_gw.png");
-}
-
-.about-us .social-buttons span:nth-child(3):hover {
-  background-image: url("assets/images/social_tw.png");
-}
-
-.about-us .social-buttons span:last-child:hover {
-  background-image: url("assets/images/social_inw.png");
-}
-
 .about-us .social-buttons span:hover {
   cursor: pointer;
 }
@@ -802,22 +786,6 @@ footer .social-buttons span:nth-child(3) {
 
 footer .social-buttons span:last-child {
   background-image: url("assets/images/social_in2.png");
-}
-
-footer .social-buttons span:first-child:hover {
-  background-image: url("assets/images/social_fw.png");
-}
-
-footer .social-buttons span:nth-child(2):hover {
-  background-image: url("assets/images/social_gw.png");
-}
-
-footer .social-buttons span:nth-child(3):hover {
-  background-image: url("assets/images/social_tw.png");
-}
-
-footer .social-buttons span:last-child:hover {
-  background-image: url("assets/images/social_inw.png");
 }
 
 footer .social-buttons span:hover {
