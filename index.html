@@ -197,13 +197,25 @@
         porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris
         condimentum nibh.</p>
       <div class="block-wrap">
-        <form class="forms-wrap" name="main">
-          <input type="text" placeholder="Name (Required)" required>
-          <input type="email" placeholder="Email (Required)" required>
-          <input type="text" placeholder="Subject">
+        <form class="forms-wrap" name="main" onsubmit="return false;">
+          <input type="text" name="personName" placeholder="Name (Required)" required>
+          <input type="email" name="email" placeholder="Email (Required)" required>
+          <input type="text" name="subject" placeholder="Subject">
           <textarea name="description" id="description" placeholder="Describe your project in detail..."></textarea>
-          <button>Submit</button>
+          <!-- Open The Modal -->
+          <button id="submit">Submit</button>
         </form>
+        <div id="modal" class="modal">
+
+          <!-- Modal content -->
+          <div class="modal-content">
+            <p>Письмо отправлено</p>
+            <p>Без темы</p>
+            <p>Без описания</p>
+            <button class="close">OK</span>
+          </div>
+
+        </div>
         <section class="information">
           <h3>Contact Information</h3>
           <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viver-

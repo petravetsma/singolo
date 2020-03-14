@@ -1,20 +1,24 @@
 window.onload = function() {
   // Header
-  makeActive(MENU, "a", "active")
+  makeActive(MENU, "a", "active");
 
   // Slider
-  rightSlide()
-  leftSlide()
+  rightSlide();
+  leftSlide();
 
   // Phone screen
   hideScreen(PHONE_1, PHONE_1_SCREEN);
   hideScreen(PHONE_2, PHONE_2_SCREEN);
 
   // Portfolio
-  moveElements()
-  makeActive(PORTFOLIO_LIST, "li", "portfolio-active")
+  moveElements();
+  makeActive(PORTFOLIO_LIST, "li", "portfolio-active");
   addBorder();
 
+  // Modal
+  openModal();
+  addInfoToModal();
+  closeModal();
 }
 
   // Header
@@ -33,6 +37,11 @@ window.onload = function() {
   // Portfolio
   const PORTFOLIO_LIST = document.getElementById("portfolio-list");
   const GALLERY = document.getElementById("gallery");
+  // Form
+  const MODAL = document.getElementById("modal");
+  const SUBMIT = document.getElementById("submit");
+  const CLOSE_MODAL = document.getElementsByClassName("close")[0];
+  const FORM = document.forms.main;
 
   function makeActive(block, element, activeClass) {
     block.addEventListener("click", (event) => {
@@ -108,6 +117,45 @@ window.onload = function() {
     });
   }
 
+  function addInfoToModal() {
 
-// document.forms.my.
-  // FORM_1.submit() // опасная вещь
+    SUBMIT.addEventListener("click", () => {
+      let subject = FORM.elements.subject.value;
+      let description = FORM.elements.description.value;
+
+      if (subject !== "") {
+        MODAL.querySelector(".modal-content p:nth-child(2)").textContent = `Тема: ${subject}`;
+      } else if (subject == "") {
+        MODAL.querySelector(".modal-content p:nth-child(2)").textContent = `Без темы`;
+      }
+      if (description !== "") {
+        MODAL.querySelector(".modal-content p:nth-child(3)").textContent = `Описание: ${description}`;
+      } else if (description == "") {
+        MODAL.querySelector(".modal-content p:nth-child(3)").textContent = `Без описания`;
+      }
+    })
+
+
+  }
+
+  function openModal() {
+    SUBMIT.addEventListener("click", () => {
+      let userName = FORM.elements.personName;
+      let email = FORM.elements.email;
+
+      if (userName.validity.valid && email.validity.valid) {
+        MODAL.style.display = "block";
+      }
+    })
+  }
+
+  function closeModal() {
+    CLOSE_MODAL.addEventListener("click", () => {
+      MODAL.style.display = "none";
+    })
+    window.addEventListener("click", (event) => {
+      if (event.target === MODAL) {
+        MODAL.style.display = "none";
+      }
+    })
+  }
