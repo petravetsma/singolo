@@ -587,6 +587,7 @@ main .columns section img {
   padding-left: 15px;
   margin-bottom: 16px;
   font-size: 12px;
+  font-family: "Lato-Regular", "Tahoma", sans-serif;
   color: #ffffff;
   background-color: #d6564f;
   border: none;
@@ -599,6 +600,7 @@ main .columns section img {
   padding: 10px 0 0 15px;
   margin-bottom: 16px;
   font-size: 12px;
+  font-family: "Lato-Regular", "Tahoma", sans-serif;
   color: #ffffff;
   background-color: #d6564f;
   border: none;
@@ -611,10 +613,16 @@ main .columns section img {
   height: 38px;
   padding-left: 15px;
   font-size: 12px;
+  font-family: "Lato-Regular", "Tahoma", sans-serif;
   color: #f48c8f;
   background-color: #d6564f;
   border: none;
   border-radius: 4px;
+}
+
+.forms-wrap button:hover {
+  color: #f58e89;
+  background-color: #cf3d36;
 
 }
 
@@ -639,10 +647,18 @@ main .columns section img {
 
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto;
+  margin: 10% auto;
   padding: 25px;
   border: 1px solid #888;
-  width: 50%;
+  width: 65%;
+}
+
+.modal-content p:nth-child(2) {
+  overflow-wrap: break-word;
+}
+
+.modal-content p:nth-child(3) {
+  overflow-wrap: break-word;
 }
 
 .close {
