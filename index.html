@@ -198,10 +198,10 @@
         condimentum nibh.</p>
       <div class="block-wrap">
         <form class="forms-wrap" name="main" onsubmit="return false;">
-          <input type="text" name="personName" placeholder="Name (Required)" required>
-          <input type="email" name="email" placeholder="Email (Required)" required>
-          <input type="text" name="subject" placeholder="Subject">
-          <textarea name="description" id="description" placeholder="Describe your project in detail..."></textarea>
+          <input type="text" name="personName" placeholder="Name (Required)" maxlength="40" required>
+          <input type="email" name="email" placeholder="Email (Required)" maxlength="40" required>
+          <input type="text" name="subject" placeholder="Subject" maxlength="80">
+          <textarea name="description" id="description" placeholder="Describe your project in detail..." maxlength="1200"></textarea>
           <!-- Open The Modal -->
           <button id="submit">Submit</button>
         </form>
