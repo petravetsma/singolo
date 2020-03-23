@@ -47,12 +47,18 @@ html {
 
 /* --- Header --- */
 
-
-
 header {
   background-color: #2d303a;
   height: 95px;
   border-bottom: 6px solid #323746;
+}
+
+header .burger-menu {
+  position: absolute;
+  display: none;
+  width: 25px;
+  height: 20px;
+  background-image: url("assets/images/burger-menu-icon.png");
 }
 
 header .logo {
@@ -851,4 +857,17 @@ footer .social-buttons span:hover {
   }
 }
 
+@media (min-width: 375px) and (max-width: 767px) {
+  header .burger-menu {
+    display: block;
+  }
+
+  header .logo {
+
+  }
+
+  header nav {
+    display: none;
+  }
+}
 
