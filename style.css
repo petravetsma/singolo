@@ -982,6 +982,7 @@ footer .social-buttons span:hover {
 
   .gallery-img {
     flex: 1 0 34%;
+    margin: 7px;
   }
 
   .about-us {
