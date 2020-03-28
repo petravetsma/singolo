@@ -12,14 +12,18 @@ window.onload = function () {
 
   // Portfolio
   moveElements();
-  makeActivePortfolioNav()
+  makeActivePortfolioNav();
   addBorder();
 
   // Modal
   openModal();
   addInfoToModal();
   closeModal();
-  clearForm()
+  clearForm();
+
+  // Menu
+  closeMenu();
+  makeActiveYOffsetPosition()
 }
 
 let currentSlide = 1;
@@ -212,4 +216,46 @@ function clearForm() {
       deleteValues()
     }
   })
+}
+
+function closeMenu() {
+  const MENU = document.getElementById("header-ul");
+  const TOGGLE = document.getElementById("toggle");
+
+  MENU.addEventListener("click", (event) => {
+    if (event.target.tagName === "A") {
+      TOGGLE.checked = false;
+    }
+  })
+}
+
+function makeActiveYOffsetPosition() {
+  let homeHeight = document.getElementById("home").clientHeight + document.getElementById("phone-block").clientHeight;
+  let servicesHeight = homeHeight + document.getElementById("services").clientHeight;
+  let portfolioHeight = servicesHeight + document.getElementById("portfolio").clientHeight;
+  let aboutUsHeight = portfolioHeight + document.getElementById("about").clientHeight;
+  let contactHeight = aboutUsHeight + document.getElementById("contact").clientHeight;
+
+  function makeOneActive(selector) {
+    document.querySelectorAll("a").forEach(el => el.classList.remove("active"));
+    document.querySelector(selector).classList.add("active");
+  }
+
+  window.addEventListener('scroll', (event) => {
+    if (window.pageYOffset >= 0 && window.pageYOffset <= homeHeight) {
+      makeOneActive("#header-ul li:first-child a")
+    }
+    if (window.pageYOffset >= homeHeight && window.pageYOffset <= servicesHeight) {
+      makeOneActive("#header-ul li:nth-child(2) a")
+    }
+    if (window.pageYOffset >= servicesHeight && window.pageYOffset <= portfolioHeight) {
+      makeOneActive("#header-ul li:nth-child(3) a")
+    }
+    if (window.pageYOffset >= portfolioHeight && window.pageYOffset <= aboutUsHeight) {
+      makeOneActive("#header-ul li:nth-child(4) a")
+    }
+    if (window.pageYOffset >= aboutUsHeight && window.pageYOffset <= contactHeight) {
+      makeOneActive("#header-ul li:nth-child(5) a")
+    }
+  });
 }
