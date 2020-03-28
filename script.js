@@ -19,6 +19,7 @@ window.onload = function () {
   openModal();
   addInfoToModal();
   closeModal();
+  clearForm()
 }
 
 let currentSlide = 1;
@@ -182,6 +183,33 @@ function closeModal() {
   window.addEventListener("click", (event) => {
     if (event.target === MODAL) {
       MODAL.style.display = "none";
+    }
+  })
+}
+
+function clearForm() {
+  const FORM = document.forms.main;
+  const PERSONNAME = FORM.elements.personName;
+  const EMAIL = FORM.elements.email;
+  const SUBJECT = FORM.elements.subject;
+  const DESCRIPTION = FORM.elements.description;
+
+  const MODAL = document.getElementById("modal");
+  const CLOSE_MODAL = document.getElementsByClassName("close")[0];
+
+  function deleteValues() {
+    PERSONNAME.value = "";
+    EMAIL.value = "";
+    SUBJECT.value = "";
+    DESCRIPTION.value = "";
+  }
+
+  CLOSE_MODAL.addEventListener("click", () => {
+    deleteValues()
+  })
+  window.addEventListener("click", (event) => {
+    if (event.target === MODAL) {
+      deleteValues()
     }
   })
 }
