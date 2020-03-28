@@ -230,18 +230,24 @@ function closeMenu() {
 }
 
 function makeActiveYOffsetPosition() {
-  let homeHeight = document.getElementById("home").clientHeight + document.getElementById("phone-block").clientHeight;
-  let servicesHeight = homeHeight + document.getElementById("services").clientHeight;
-  let portfolioHeight = servicesHeight + document.getElementById("portfolio").clientHeight;
-  let aboutUsHeight = portfolioHeight + document.getElementById("about").clientHeight;
-  let contactHeight = aboutUsHeight + document.getElementById("contact").clientHeight;
+  let homeHeight, servicesHeight, portfolioHeight, aboutUsHeight, contactHeight;
 
   function makeOneActive(selector) {
     document.querySelectorAll("a").forEach(el => el.classList.remove("active"));
     document.querySelector(selector).classList.add("active");
   }
 
-  window.addEventListener('scroll', (event) => {
+  window.addEventListener('scroll', () => {
+    function getHeight(id, before) {
+      return before + document.getElementById(id).clientHeight;
+    }
+
+    homeHeight = document.getElementById("home").clientHeight + document.getElementById("phone-block").clientHeight;
+    servicesHeight = getHeight("services", homeHeight);
+    portfolioHeight = getHeight("portfolio", servicesHeight);
+    aboutUsHeight = getHeight("about", portfolioHeight);
+    contactHeight = getHeight("contact", aboutUsHeight);
+
     if (window.pageYOffset >= 0 && window.pageYOffset <= homeHeight) {
       makeOneActive("#header-ul li:first-child a")
     }
